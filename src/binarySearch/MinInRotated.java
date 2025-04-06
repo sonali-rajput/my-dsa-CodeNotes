@@ -3,7 +3,7 @@ package binarySearch;
 public class MinInRotated {
 
     public static void main(String[] args) {
-        int[] nums = {5,6,7,1,2};
+        int[] nums = {2,1};
         System.out.println(findMin(nums));
     
     }
@@ -24,7 +24,7 @@ public class MinInRotated {
             int mid = (left+right)/2;
 
             ans = Math.min(ans, nums[mid]);
-            if(nums[left]<nums[mid]){
+            if(nums[left]<=nums[mid]){
                 left = mid +1;
             }
             else {
