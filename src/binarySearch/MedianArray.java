@@ -12,7 +12,7 @@ public class MedianArray {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         if(nums1.length > nums2.length) {
-            findMedianSortedArrays(nums2, nums1);
+            return findMedianSortedArrays(nums2, nums1);
         }
 
         int x = nums1.length;
