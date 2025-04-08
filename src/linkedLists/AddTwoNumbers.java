@@ -29,9 +29,9 @@ public class AddTwoNumbers {
             int y = (l2 !=null)? l2.val: 0;
             int sum = carry + x + y;
 
-            carry = sum/10;
+            carry = sum/10; // carry = sum / 10 (e.g., if sum is 17, carry = 1)
 
-            ans.next = new ListNode(sum%10);
+            ans.next = new ListNode(sum%10);  // Create a new node with the value sum % 10 (e.g., 7)
             ans = ans.next;
 
             if(l1 != null) {
