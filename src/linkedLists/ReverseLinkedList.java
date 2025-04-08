@@ -38,7 +38,7 @@ public class ReverseLinkedList {
     public static void printLinkedList(ListNode head) {
         ListNode current = head;
         while(current!=null) {
-            System.out.println(current.val + " ");
+            System.out.print(current.val + " ");
             current = current.next;
         }
         System.out.println();
