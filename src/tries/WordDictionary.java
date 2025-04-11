@@ -58,9 +58,8 @@ public class WordDictionary {
                         }
                     }
                 }
-                else {
                     return false;
-                }
+            
             }
             else {
                 node = node.children.get(ch); // iterate over the next value
