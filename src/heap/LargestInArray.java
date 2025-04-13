@@ -14,15 +14,17 @@ public class LargestInArray {
 
     public int findKthLargest(int[] nums, int k) {
         
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(k);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b) -> b-a); // comparator 
 
-        for(int n: nums) {
-            minHeap.add(n);
-            if(minHeap.size()>k) {
-                minHeap.poll();
-            }
+        for(int num: nums) {
+            maxHeap.add(num);
         }
-        return minHeap.peek();
+
+        for(int i=0;i<k-1;i++) {
+            maxHeap.poll();
+        }
+
+        return maxHeap.peek();
     }
 
 
