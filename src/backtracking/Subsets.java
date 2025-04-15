@@ -26,7 +26,7 @@ public class Subsets {
         for (int i=index; i<nums.length; i++){
             current.add(nums[i]);
             generateSubsets(i+1, nums, current, result);
-            current.remove(current.size()-1); // for ex we done visiting first element so we remove one element from the array
+            current.remove(current.size()-1); // backtrack, current = []
         }
     }
 }
