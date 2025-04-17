@@ -45,7 +45,7 @@ public class CombinationII {
             }
 
             current.add(candidates[i]);
-            backtrack(result, current, candidates, target-candidates[i], i+1);  // target-candidates[i] to get the candidates[i] = 0 
+            backtrack(result, current, candidates, target-candidates[i], i+1);  // target-candidates[i] to get the target to 0 (ex first iteraton target be 4 then 2 then 0)
             current.remove(current.size() - 1);
         }
     }
