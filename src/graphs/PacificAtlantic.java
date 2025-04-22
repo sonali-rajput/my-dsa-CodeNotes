@@ -30,13 +30,13 @@ public class PacificAtlantic {
 
         // to fill the grid with reachable cells
         for (int i = 0; i < row; i++) {
-            dfs(i, 0, pacificReachable, heights);
-            dfs(i, col - 1, atlanticReachable, heights);
+            dfs(i, 0, pacificReachable, heights); // Left edge
+            dfs(i, col - 1, atlanticReachable, heights); // Right edge
         }
 
         for (int j = 0; j < col; j++) {
-            dfs(0, j, pacificReachable, heights);
-            dfs(row - 1, j, atlanticReachable, heights);
+            dfs(0, j, pacificReachable, heights); // Top edge
+            dfs(row - 1, j, atlanticReachable, heights); // Bottom edge
         }
 
         List<List<Integer>> result = new ArrayList<>();
@@ -51,6 +51,13 @@ public class PacificAtlantic {
         return result;
 
     }
+
+    /* 🌊 Visualization
+You can think of water starting from the Pacific/Atlantic edges, and "climbing uphill" into cells as long as heights increase or stay the same.
+
+After the DFS from both sides, we collect the intersection: cells reachable from both oceans.
+
+ */
 
     public void dfs(int row, int col, boolean[][] reachable, int[][] heights) {
 
@@ -68,6 +75,7 @@ public class PacificAtlantic {
                 continue;
             }
 
+            // If it has been visited.
             if (reachable[newRow][newCol]) {
                 continue;
             }
