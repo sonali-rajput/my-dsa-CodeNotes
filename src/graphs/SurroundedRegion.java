@@ -49,7 +49,7 @@ public class SurroundedRegion {
     private void dfs(char[][] board, int i, int j) {
 
         // check for out of bounds
-        if(i<0 || j<0 || i<board.length || j<board[0].length || board[i][j] != 'O') {
+        if(i<0 || j<0 || i>=board.length || j>=board[0].length || board[i][j] != 'O') {
             return;
         }
 
