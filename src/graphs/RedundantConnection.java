@@ -14,7 +14,7 @@ public class RedundantConnection {
 
     public int[] findRedundantConnection(int[][] edges) {
         
-        int[] parent = new int[edges.length - 1];
+        int[] parent = new int[edges.length + 1];
         for(int i=1; i<= edges.length; i++){
             parent[i] = i; // each node is its own parent (Nodes are individual sets of their own)
         }
