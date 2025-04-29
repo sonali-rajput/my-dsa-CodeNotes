@@ -1,4 +1,4 @@
-package graphs;
+package advanceGraph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class ReconstructItineray {
             hashMap.computeIfAbsent(from, k -> new ArrayList<>()).add(to);
         }
 
-        // sort the to values in graph
+        // sort the to(destinations) values in graph
         for(List<String> to: hashMap.values()){
             Collections.sort(to);
         }

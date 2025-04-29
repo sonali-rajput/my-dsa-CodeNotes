@@ -1,4 +1,4 @@
-package graphs;
+package advanceGraph;
 
 import java.util.PriorityQueue;
 
