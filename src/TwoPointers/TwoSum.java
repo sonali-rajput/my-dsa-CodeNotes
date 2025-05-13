@@ -19,7 +19,7 @@ public class TwoSum {
 
         while(left<right) {
             if ((numbers[left]+numbers[right]) > target) {
-                right = right +1;
+                right = right - 1;
             }
             else if (numbers[left]+numbers[right] < target) {
                 left = left +1;
