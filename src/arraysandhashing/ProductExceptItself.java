@@ -25,9 +25,9 @@ public class ProductExceptItself {
             prefix = prefix*nums[i];
         }
 
-        for(int i = nums.length - 1; i >=0; i--){
-            results[i] = postfix*results[i];
-            postfix = postfix*nums[i];
+        for(int i = nums.length - 1; i >=0; i--){ // go in reverse now
+            results[i] = postfix*results[i]; // multiply with the result array elements
+            postfix = postfix*nums[i]; // update the postfix
         }
         return results;
     }
