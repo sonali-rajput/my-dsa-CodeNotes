@@ -9,22 +9,23 @@ public class MinInRotaArr {
 // return mid;
 
     public static void main(String[] args) {
-        int[] nums = {4,5,6,7,0,1,2};
+        int[] nums = {1,2,3,4,5};
         System.out.println(mininrotatedarr(nums));
     }
 
     public static int mininrotatedarr(int[] nums){
 
         int left = 0; 
-        int right = nums.length - 1; //
+        int right = nums.length - 1; // 5
 
-        while (left<=right){
+        while (left<=right){ // l = 0, r = 5
 
-            int mid = left + (right - left)/2;
+            int mid = left + (right - left)/2; // mid = 2
 
-            if (nums[left] < nums[mid] && nums[left] < nums[right]){
-                right = mid - 1;
-            } else if( nums[right] < nums[mid]) {
+            if ((nums[left] < nums[mid] && nums[left] < nums[right]) || nums[left] > nums[mid]) { // 
+            
+                right = mid;
+            } else if( nums[right] < nums[left] && nums[right] < nums[mid]) {
                 left = mid + 1;
             } else {
                 return nums[mid];
