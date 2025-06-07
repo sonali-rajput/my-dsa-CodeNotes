@@ -16,13 +16,12 @@ public class MinInRotaArr {
     public static int mininrotatedarr(int[] nums){
 
         int left = 0; 
-        int right = nums.length - 1; // 5
+        int right = nums.length - 1; 
 
-        while (left<=right){ // l = 0, r = 5
+        while (left<=right){ 
+            int mid = left + (right - left)/2; 
 
-            int mid = left + (right - left)/2; // mid = 2
-
-            if ((nums[left] < nums[mid] && nums[left] < nums[right]) || nums[left] > nums[mid]) { // 
+            if ((nums[left] < nums[mid] && nums[left] < nums[right]) || nums[left] > nums[mid]) { 
             
                 right = mid;
             } else if( nums[right] < nums[left] && nums[right] < nums[mid]) {
